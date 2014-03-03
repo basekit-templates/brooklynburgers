@@ -55,9 +55,12 @@
 			{% block content %}
 			{% endblock %}
 
-			{% include "footer.twig" %}
-
 		</div>
+
+<footer class="bk-footer">
+			{{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
+</footer>
+
 		
 		<script type="text/javascript">
 			!function() {
