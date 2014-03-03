@@ -1,7 +1,5 @@
 <!doctype html>
 <html lang="{{ page.seoLang }}">
-
-	<header class="bk-header">
 	
 		{% include "head.twig" %}
 		
@@ -24,17 +22,31 @@
 			});
 		</script>
 
-	</head>
-
 	<body class="{{ page.backgroundClass }}">
 
 <header class="bk-header">
-			{{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-		</header>
+	<div class="logo">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+	</div>
+	    <div class="companyheader wrapper clearfix">
+	        <div class="header-left">
+	            {{widget('content', 'footercolumn1content', {"content":"<h4>TELEPHONE: +1 512-291-8222</h4>"})|raw}}
+	        </div>
+	        <div class="header-center">
+	            {{widget('companyname', 'companyname', {"business": "BROOKLYN BURGERS"})|raw}}
+	        </div>
+	        <div class="header-right">
+	        	{{widget('content', 'footercolumn2content', {"content":"<h4>OPEN TIL 11PM EVERYDAY</h4>"})|raw}}
+	        </div>
+	    </div>       
+</header>
 
 		<nav class="nav">
 			{{widget('extendednavigation', 'navigationheader', {})|raw}}
 		</nav>
+		<div class="image">
+			{{widget('image', 'thisunqiuewidgetname', { 'src': asset('images/burger.png'), 'title': 'my image', 'fileName': 'burger.png', 'fileSize': '580kb', 'imageSize': '1192 x 309', 'imageWidth': '1192px'})|raw}}
+		</div>
 
 		<div class="page-wrap">
 		
