@@ -40,45 +40,10 @@
 	Type
 	=============================== */
 
-h1 {
-	font-family:@font-swatch1-font-family; 
-	font-weight: @font-swatch1-font-weight; 
-	color:@font-swatch1-color; 
-	line-height:@font-swatch1-line-height; 
-	letter-spacing: @font-swatch1-letter-spacing; 
-	font-size: @font-swatch1-font-size;
-	padding:10px 0px;
-}
-
 .menu-page h1 {
 		background-color:@color-swatch7;
 }
 
-h2 {
-	font-family:@font-swatch2-font-family; 
-	font-weight: @font-swatch2-font-weight; 
-	color:@font-swatch2-color; 
-	line-height:@font-swatch2-line-height; 
-	letter-spacing: @font-swatch2-letter-spacing; 
-	font-size: @font-swatch2-font-size;
-}
-
-h3 {
-	font-family:@font-swatch3-font-family; 
-	font-weight: @font-swatch3-font-weight; 
-	color:@font-swatch3-color; 
-	line-height:@font-swatch3-line-height; 
-	letter-spacing: @font-swatch3-letter-spacing; 
-	font-size: @font-swatch3-font-size;
-}
-h4 {
-	font-family:@font-swatch4-font-family; 
-	font-weight: @font-swatch4-font-weight; 
-	color:@font-swatch4-color; 
-	line-height:@font-swatch4-line-height; 
-	letter-spacing: @font-swatch4-letter-spacing; 
-	font-size: @font-swatch4-font-size;
-}
 h5, .main p, .main .p-font, .main a, .widget.profile, label, p, .menu-item-nutritional-title {
 	font-family:@font-swatch5-font-family;
 	font-weight: @font-swatch5-font-weight;
@@ -557,10 +522,13 @@ header.bk-header {
     background-position:bottom;
     background-size:contain;
 	padding:60px 0px 80px 0px;
-            .header-left {
+			.header-left {
                 float:left;
                 width:33%;
-                margin-top:5px;
+                padding-top:10px;
+                .widget.profile span {
+                    float:left;
+                }
                     .widget.content { 
                     @media @tablet {
                     margin:0px auto;
@@ -577,7 +545,10 @@ header.bk-header {
             .header-right {
                 float:right;
                 width:33%;
-                margin-top:5px;
+                padding-top:20px;
+                .widget.profile span {
+                    float:right;
+                }
                 .widget.profile {
                     @media @tablet {
                     margin:0px auto;
@@ -601,9 +572,8 @@ header.bk-header {
 
  .companyheader {
         float:none;
-        max-width: 1100px;
+        max-width: 1200px;
         margin: 0px auto;
-
         .logo, .companyname {
             text-align: center;
             float:none;
@@ -661,6 +631,9 @@ header.bk-header {
     } /* end clicktocall */
 
 }   /* end header */
+
+.header-right
+
 .header-section, .footer-section {
 	background: fade(@color-swatch5, 10%);
 	margin: 0 auto;
@@ -737,6 +710,15 @@ footer.bk-footer h3 {
 
 .clearfix {
     *zoom: 1;
+}
+
+ .widget.profile span {
+    font-family:@font-swatch8-font-family;
+    font-weight: @font-swatch8-font-weight;
+    color:@font-swatch8-color;
+    line-height:@font-swatch8-line-height;
+    letter-spacing: @font-swatch8-letter-spacing;
+    font-size: @font-swatch8-font-size;    
 }
 
 /*	===============================
@@ -899,6 +881,10 @@ span.cross {
 .menu-header h1 {
 	color:white;
 	background-color:@color-swatch2;
+}
+
+.widget.image span.image-title {
+	display:none;
 }
 
 /*	===============================
@@ -1217,14 +1203,21 @@ a.blog-post-more-link, .blog-list-footer a {
 	#footercolumn2content .bk-content-text {
 		float:none;
 	}
+
+	header.bk-header .header-left {
+		margin-top:0;
+	}
+
+	header.bk-header .header-left .widget.profile span {
+		margin:0px auto;
+		display:table;
+		float:none;
+	}
 }
 
 @media @mobile {
 	.widget {
 		&.companyname a {
-			font-size: bkscale(@font-swatch5-font-size, 3);
-			letter-spacing: 8px;
-			margin: 0.2em 0 0;
 		}
 		&.clicktocall a {
 			background-color: transparent;
