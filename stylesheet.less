@@ -1278,3 +1278,37 @@ a.blog-post-more-link, .blog-list-footer a {
 		width:78%;
 	}
 }
+
+/* ===============================
+   9. Print override
+   =============================== */
+.print-mixin {
+    .headerrow,
+    .bk-footer,
+    .bk-header .widget.profile  {
+        display:none;
+    }
+    .companyheader {
+        padding:0px;
+    }
+    .menu-container {
+        display:none;
+    }
+    .menu-info {
+        margin:0px;
+    }
+    .widget.menu .main.wrapper {
+        page-break-before:always;
+    }
+    .widget.menu .menu-item-image-wrap {
+        height:150px;
+    }
+}
+
+@media print {
+    .print-mixin;
+}
+
+.bk-print {
+    .print-mixin;
+}
