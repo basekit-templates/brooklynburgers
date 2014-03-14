@@ -24,22 +24,7 @@
 
 	<body class="{{ page.backgroundClass }}">
 
-<header class="bk-header page-wrap">
-	<div class="logo">
-		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-	</div>
-	    <div class="companyheader page-wrap clearfix">
-	        <div class="header-left">
-	            {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
-	        </div>
-	        <div class="header-center">
-	            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
-	        </div>
-	        <div class="header-right">
-	        	{{widget('profile', 'footercolumn1profileaddress', { 'profileType':'address', 'address':'profile'})|raw}} 
-	        </div>
-	    </div>       
-</header>
+		{% include "header.twig" %}
 
 		<nav class="nav page-wrap">
 			{{widget('extendednavigation', 'navigationheader', {})|raw}}
@@ -49,19 +34,12 @@
 		</div>
 
 		<div class="page-wrap">
-		
-			{% include "header.twig" %}
 
 			{% block content %}
 			{% endblock %}
 
 		</div>
 
-<footer class="bk-footer">
-	{{widget('profile', 'footercolumn1socialicons', { 'profileType':'socialicons', 'socialicons':'profile'})|raw}}
-</footer>
-
-		
 		<script type="text/javascript">
 			!function() {
 				function supportsSVG() {

@@ -1,0 +1,16 @@
+<header class="bk-header page-wrap">
+	<div class="logo">
+		{{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+	</div>
+	    <div class="companyheader page-wrap clearfix">
+	        <div class="header-left">
+	            {{widget('profile', 'footercolumn1profilePhone', { 'profileType':'phone', 'phone':'profile'})|raw}} 
+	        </div>
+	        <div class="header-center">
+	            {{widget('companyname', 'companyname', {"business": "profile"})|raw}}
+	        </div>
+	        <div class="header-right">
+	        	{{widget('profile', 'footercolumn3profileaddress', { 'profileType':'address', 'address':'profile'})|raw}} 
+	        </div>
+	    </div>       
+</header>
