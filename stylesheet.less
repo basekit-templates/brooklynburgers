@@ -168,6 +168,10 @@ input[type=submit],
 	}
 }
 
+.widget.extendednavigation {
+	.clearfix;
+}
+
 .widget .extendednavigation ul {
 	text-align: center;
 	border-top:1px solid rgba(0, 0, 0, 0.05);
@@ -430,7 +434,7 @@ body {
 	background: @color-swatch1;
 	padding-left: 2%;
 	padding-right: 2%;
-	padding-top:1%;
+	padding-top: 0;
 }
 .section.main {
 }
@@ -537,61 +541,56 @@ header.bk-header, .nav {
 }
 
 header.bk-header {
-    background-color:@color-swatch1;
-    padding:0;
-    background-repeat: no-repeat;
-    background-position:bottom;
-    background-size:contain;
-	padding:20px 0px;
-			.header-left {
-                float:left;
-                width:33%;
-                padding-top:10px;
-                .widget.profile span {
-                    display:block;
-                    text-align:left;
-                }
-                    .widget.content { 
-                    @media @tablet {
-                    margin:0px auto;
-                    display:table;
-                    text-align:center;
-                        }
-                    }
-                @media @tablet {
-                    width:100%;
-                    margin-top:20px;
-                }
-            }
+	padding: 2em 0;
+	.header-left {
+	    float:left;
+	    width:33%;
+	    padding-top:10px;
+	    .widget.profile span {
+	        display:block;
+	        text-align:left;
+	    }
+        .widget.content { 
+	        @media @tablet {
+	        margin:0px auto;
+	        display:table;
+	        text-align:center;
+        }
+	    @media @tablet {
+	        width:100%;
+	        margin-top:20px;
+	    }
+	}
+}
 
-            .header-right {
-                float:right;
-                width:33%;
-                padding-top:10px;
-                .widget.profile span {
-                    display:block;
-                    text-align:right;
-                }
-                .widget.profile {
-                    @media @tablet {
-                    margin:0px auto;
-                    display:table;
-                    }
-                }
-                @media @tablet {
-                    width:100%;
-                    margin-top:0;
-                    margin-bottom:20px;
-                }
-            }
+.header-right {
+    float:right;
+    width:33%;
+    padding-top:10px;
+    .widget.profile span {
+        display:block;
+        text-align:right;
+    }
+    .widget.profile {
+        @media @tablet {
+        margin:0px auto;
+        display:table;
+        }
+    }
+    @media @tablet {
+        width:100%;
+        margin-top:0;
+        margin-bottom:20px;
+    }
+}
 
-            .header-center {
-                float:left;
-                width:33%;
-                @media @tablet {
-                    width:100%;
-                }
-            }
+.header-center {
+    float:left;
+    width:33%;
+    @media @tablet {
+        width:100%;
+    }
+}
 
  .companyheader {
         float:none;
